@@ -5,7 +5,7 @@ const login = (name) => {
 };
 
 const start = () => {
-    console.log("App started");
+    console.log("System started");
 };
 
 const working = (name) => {
@@ -17,8 +17,20 @@ const checkout = (name) => {
 };
 
 const task = new EventEmitter();
+task.once("greet", start);
 task.on("greet", login);
+task.on("greet", working);
+task.on("greet", checkout);
+
+task.once("exit", () => {
+    console.log("System shutting down");
+});
+
 task.emit("greet", "Alisha");
+task.emit("greet", "Angel");
+task.off("greet", working);
+task.emit("greet", "Aadhaya");
+task.emit("exit","Manager");
 
 
 login("Alisha");
