@@ -9,13 +9,13 @@ const f3 = () => {
 };
 
 function main() {
-    console.log("main");
+    console.log("main");//run first
     setTimeout(f1,0);
   //  setInterval(f1,1000)
     setImmediate(f2);
    
-    f3();
-    console.log("end");
+   process.nextTick(f3);
+    console.log("end");//run first
 }
 
 main();
