@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Laptop",
+    "price": 50000,
+    "qty": 6
+  },
+  {
+    "id": 2,
+    "name": "alisha",
+    "price": 809,
+    "qty": 3
+  },
+  {
+    "id": 3,
+    "name": "aryan",
+    "price": 670,
+    "qty": 5
+  },
+  {
+    "id": 4,
+    "name": "shagun",
+    "price": 856,
+    "qty": 5
+  }
+]
